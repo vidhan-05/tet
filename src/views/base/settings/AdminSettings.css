@@ -1,0 +1,184 @@
+:root {
+  --primary-bg: #1E1E2D;
+  --card-bg: #1E1E2F;
+  --border-color: #2D2D43;
+  --text-color: #FFFFFF;
+  --text-muted: #92929F;
+  --accent-color: #7B68EE;
+  --accent-hover: #6A5ACD;
+  --switch-bg: #2D2D43;
+}
+
+/* Main layout */
+.admin-settings-page {
+  background-color: var(--primary-bg);
+  min-height: 100vh;
+  padding: 2rem;
+  color: var(--text-color);
+}
+
+/* Breadcrumb styles */
+.breadcrumb-container {
+  margin-bottom: 2rem;
+}
+
+.settings-breadcrumb {
+  background: transparent !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.settings-breadcrumb .breadcrumb-item {
+  color: var(--accent-color) !important;
+  font-size: 0.875rem;
+}
+
+.settings-breadcrumb .breadcrumb-item.active {
+  color: var(--text-muted) !important;
+}
+
+.settings-breadcrumb .breadcrumb-item + .breadcrumb-item::before {
+  color: var(--text-muted) !important;
+}
+
+.breadcrumb-link {
+  text-decoration: none;
+}
+
+.breadcrumb-link:hover {
+  color: var(--accent-hover) !important;
+}
+
+/* Title */
+.settings-title {
+  font-size: 1.75rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  color: var(--text-color);
+}
+
+/* Card styles */
+.settings-card {
+  background-color: var(--card-bg) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: 0.5rem !important;
+  margin-bottom: 1.5rem !important;
+}
+
+.settings-card-header {
+  background-color: var(--card-bg) !important;
+  border-bottom: 1px solid var(--border-color) !important;
+  padding: 1.25rem !important;
+}
+
+.settings-card-header h2 {
+  color: var(--text-color);
+  font-size: 1.25rem;
+  margin: 0;
+  font-weight: 500;
+}
+
+.settings-card-body {
+  padding: 1.25rem !important;
+}
+
+/* Settings list */
+.settings-list {
+  margin-bottom: 1.5rem;
+}
+
+.settings-item {
+  display: flex;
+  align-items: center;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.settings-item:last-child {
+  border-bottom: none;
+}
+
+.settings-label {
+  margin-left: 1rem;
+  color: var(--text-color);
+  font-size: 1rem;
+}
+
+/* Custom switch */
+.custom-switch {
+  position: relative;
+  display: inline-block;
+  width: 44px;
+  height: 22px;
+}
+
+.custom-switch-input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.custom-switch-label {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--switch-bg);
+  transition: .4s;
+  border-radius: 22px;
+}
+
+.custom-switch-label:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 3px;
+  bottom: 3px;
+  background-color: var(--text-color);
+  transition: .4s;
+  border-radius: 50%;
+}
+
+.custom-switch-input:checked + .custom-switch-label {
+  background-color: var(--accent-color);
+}
+
+.custom-switch-input:checked + .custom-switch-label:before {
+  transform: translateX(22px);
+}
+
+/* Save button */
+.settings-save-button {
+  background-color: var(--accent-color) !important;
+  border: none !important;
+  color: var(--text-color) !important;
+  padding: 0.75rem !important;
+  border-radius: 0.375rem !important;
+  cursor: pointer !important;
+  font-size: 0.875rem !important;
+  font-weight: 500 !important;
+  width: 100% !important;
+  transition: all 0.2s ease !important;
+  text-transform: none !important;
+}
+
+.settings-save-button:hover {
+  background-color: var(--accent-hover) !important;
+  transform: translateY(-1px);
+}
+
+.settings-save-button:active {
+  transform: translateY(0);
+}
+
+/* CoreUI overrides */
+.card {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+.container {
+  max-width: 1200px !important;
+}
